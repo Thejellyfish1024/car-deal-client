@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import { BsGoogle } from 'react-icons/bs';
 
 
 const Login = () => {
     return (
         <div>
-            <NavBar></NavBar>
             <div className="max-w-7xl mx-auto mb-10">
             <div className=" flex justify-center">
                 <div className="hero p-8 mt-8 w-fit bg-base-200 rounded-lg">
@@ -32,7 +31,7 @@ const Login = () => {
                                 <p className=" font-medium text-center mt-2">Don't have an account ? <span className="text-red-600"><Link to="/register">Register</Link></span></p>
                             </form>
                             <div className="px-8 py-4">
-                                <button className="btn btn-primary w-full hover:bg-blue-600" >Continue With Google</button>
+                                <button className="btn w-full normal-case border-2 font-semibold text-lg border-purple-500" ><BsGoogle className="text-purple-500 text-2xl"></BsGoogle> Google</button>
                             </div>
                         </div>
                     </div>

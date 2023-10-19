@@ -1,3 +1,5 @@
+import Banner from "../components/Banner";
+import Brands from "../components/Brands";
 import NavBar from "../components/NavBar";
 
 
@@ -5,7 +7,8 @@ const Home = () => {
     return (
         <div>
             <NavBar></NavBar>
-            This is home
+            <Banner></Banner>
+            <Brands></Brands>
         </div>
     );
 };

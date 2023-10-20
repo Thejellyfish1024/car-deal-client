@@ -2,14 +2,22 @@
 
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import SingleBrandCard from "../components/SingleBrandCard";
 
 const SingleBrandPage = () => {
     const [sliders, setSliders] = useState({});
+    const [brandCards, setBrandCards] = useState([])
     const allBrands = useLoaderData();
-    console.log(allBrands);
+    // console.log(allBrands);
 
     const { brand } = useParams();
-    console.log(brand);
+    // console.log(brand);
+
+   useEffect(() =>{
+    const singleBrandCards = allBrands.filter(brandCard => brandCard.brand.toLowerCase() == brand.toLowerCase())
+    setBrandCards(singleBrandCards)
+    console.log(singleBrandCards);
+   },[])
 
     useEffect(() => {
         fetch('http://localhost:5000/advertisements')
@@ -17,11 +25,11 @@ const SingleBrandPage = () => {
             .then(data => {
                 // console.log(data);
                 const brandSlider = data.find(singleData => singleData.brand == brand)
-                console.log('this is brand slider', brandSlider);
+                // console.log('this is brand slider', brandSlider);
                 setSliders(brandSlider);
             })
     }, [])
-    console.log(sliders);
+    // console.log(sliders);
 
 
 
@@ -51,7 +59,20 @@ const SingleBrandPage = () => {
                     </div>
                 </div>
             </div>
-            <h2 className="text-3xl font-bold text-center py-8 uppercase">{brand}</h2>
+            <div className="mt-12 p-5 md:p-0">
+                {
+                    brandCards.length > 0 ? 
+                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 mb-10">
+                        {
+                            brandCards.map(card =><SingleBrandCard key={card._id} card={card}></SingleBrandCard>)
+                        }
+                    </div>
+                    :
+                    <div>
+                        <h2 className="text-3xl font-bold text-center my-6">No Products Available</h2>
+                    </div>
+                }
+            </div>
         </div>
     );
 };

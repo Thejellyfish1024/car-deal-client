@@ -1,31 +1,37 @@
 [
     {
         "id": 1,
+        "brand" : "toyota",
         "img": "https://global.toyota/pages/global_toyota/mobility/toyota-brand/emblem_ogp_001.png",
         "name": "Toyota"
     },
     {
         "id": 2,
+        "brand" : "ford",
         "img": "https://i.ibb.co/BjzTXmB/ford-Brand.jpg",
         "name": "Ford"
     },
     {
         "id": 3,
+        "brand" : "bmw",
         "img": "https://i.ibb.co/WFdgpjg/bmwBrand.webp",
         "name": "BMW"
     },
     {
         "id": 4,
+        "brand" : "mercedes",
         "img": "https://wallpapers.com/images/hd/mercedes-benz-logo-pictures-te1bd6pb4k1cgmjq.jpg",
         "name": "Mercedes-Benz"
     },
     {
         "id": 5,
+        "brand" : "tesla",
         "img": "https://i.ibb.co/H7zZj67/tesla-branding.webp",
         "name": "Tesla"
     },
     {
         "id": 6,
+        "brand" : "honda",
         "img": "https://www.shutterstock.com/shutterstock/videos/1085809505/thumb/4.jpg?ip=x480",
         "name": "Honda"
     }

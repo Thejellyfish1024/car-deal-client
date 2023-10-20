@@ -1,0 +1,215 @@
+[
+    {
+        "toyota": [
+            {
+                "id": 1,
+                "image": "https://example.com/toyota1.jpg",
+                "name": "Toyota Camry",
+                "brand": "Toyota",
+                "type": "Sedan",
+                "price": 26999.99,
+                "rating": 4.8,
+                "description": "The Toyota Camry is a reliable and comfortable sedan, known for its fuel efficiency and spacious interior. It's perfect for daily commuting and long road trips."
+            },
+            {
+                "id": 2,
+                "image": "https://example.com/toyota2.jpg",
+                "name": "Toyota RAV4",
+                "brand": "Toyota",
+                "type": "SUV",
+                "price": 31999.99,
+                "rating": 4.7,
+                "description": "The Toyota RAV4 is a versatile SUV, designed for both city and off-road adventures. It offers ample cargo space and advanced safety features."
+            },
+            {
+                "id": 3,
+                "image": "https://example.com/toyota3.jpg",
+                "name": "Toyota Corolla",
+                "brand": "Toyota",
+                "type": "Compact",
+                "price": 22999.99,
+                "rating": 4.6,
+                "description": "The Toyota Corolla is a popular compact car known for its affordability and great gas mileage. It's an ideal choice for urban driving."
+            },
+            {
+                "id": 4,
+                "image": "https://example.com/toyota4.jpg",
+                "name": "Toyota Highlander",
+                "brand": "Toyota",
+                "type": "Mid-Size SUV",
+                "price": 38999.99,
+                "rating": 4.9,
+                "description": "The Toyota Highlander is a mid-size SUV with a spacious interior and advanced technology. It's perfect for families and those who enjoy road trips."
+            }
+        ],
+        "ford": [
+            {
+                "id": 1,
+                "image": "https://example.com/ford1.jpg",
+                "name": "Ford F-150",
+                "brand": "Ford",
+                "type": "Truck",
+                "price": 34999.99,
+                "rating": 4.7,
+                "description": "The Ford F-150 is a popular pickup truck with impressive towing capacity and off-road capabilities. It's a versatile choice for work and leisure."
+            },
+            {
+                "id": 2,
+                "image": "https://example.com/ford2.jpg",
+                "name": "Ford Escape",
+                "brand": "Ford",
+                "type": "SUV",
+                "price": 27999.99,
+                "rating": 4.6,
+                "description": "The Ford Escape is a compact SUV with a comfortable interior and advanced tech features. It's suitable for urban and outdoor adventures."
+            },
+            {
+                "id": 3,
+                "image": "https://example.com/ford3.jpg",
+                "name": "Ford Mustang",
+                "brand": "Ford",
+                "type": "Sports Car",
+                "price": 44999.99,
+                "rating": 4.8,
+                "description": "The Ford Mustang is an iconic sports car with powerful performance and classic styling. It's a symbol of American automotive history."
+            },
+            {
+                "id": 4,
+                "image": "https://example.com/ford4.jpg",
+                "name": "Ford Fusion",
+                "brand": "Ford",
+                "type": "Sedan",
+                "price": 24999.99,
+                "rating": 4.5,
+                "description": "The Ford Fusion is a reliable and fuel-efficient sedan designed for daily commuting. It offers a comfortable ride and modern features."
+            }
+        ],
+        "bmw": [
+            {
+                "id": 1,
+                "image": "https://example.com/bmw1.jpg",
+                "name": "BMW 3 Series",
+                "brand": "BMW",
+                "type": "Sedan",
+                "price": 45999.99,
+                "rating": 4.7,
+                "description": "The BMW 3 Series is a luxury sedan with a blend of performance and elegance. It's known for its precise handling and high-quality interior."
+            },
+            {
+                "id": 2,
+                "image": "https://example.com/bmw2.jpg",
+                "name": "BMW X5",
+                "brand": "BMW",
+                "type": "SUV",
+                "price": 56999.99,
+                "rating": 4.6,
+                "description": "The BMW X5 is a premium SUV with spacious cabins and advanced technology. It combines practicality and luxury for a comfortable journey."
+            },
+            {
+                "id": 3,
+                "image": "https://example.com/bmw3.jpg",
+                "name": "BMW M5",
+                "brand": "BMW",
+                "type": "Sports Car",
+                "price": 79999.99,
+                "rating": 4.8,
+                "description": "The BMW M5 is a high-performance sports sedan with powerful engines and aggressive styling. It offers an exhilarating driving experience."
+            },
+            {
+                "id": 4,
+                "image": "https://example.com/bmw4.jpg",
+                "name": "BMW i3",
+                "brand": "BMW",
+                "type": "Electric",
+                "price": 49999.99,
+                "rating": 4.5,
+                "description": "The BMW i3 is an electric car with a distinctive design and eco-friendly features. It's perfect for those who prioritize sustainability."
+            }
+        ],
+        "tesla": [
+            {
+                "id": 1,
+                "image": "https://example.com/tesla1.jpg",
+                "name": "Tesla Model S",
+                "brand": "Tesla",
+                "type": "Electric",
+                "price": 79999.99,
+                "rating": 4.9,
+                "description": "The Tesla Model S is a high-end electric sedan with cutting-edge technology and remarkable acceleration. It's a pioneer in electric mobility."
+            },
+            {
+                "id": 2,
+                "image": "https://example.com/tesla2.jpg",
+                "name": "Tesla Model 3",
+                "brand": "Tesla",
+                "type": "Electric",
+                "price": 49999.99,
+                "rating": 4.7,
+                "description": "The Tesla Model 3 is a compact electric car known for its affordability and impressive range. It's designed for sustainable urban commuting."
+            },
+            {
+                "id": 3,
+                "image": "https://example.com/tesla3.jpg",
+                "name": "Tesla Model X",
+                "brand": "Tesla",
+                "type": "Electric SUV",
+                "price": 89999.99,
+                "rating": 4.8,
+                "description": "The Tesla Model X is an electric SUV with unique Falcon Wing doors and spacious seating. It combines style and sustainability for families."
+            },
+            {
+                "id": 4,
+                "image": "https://example.com/tesla4.jpg",
+                "name": "Tesla Model Y",
+                "brand": "Tesla",
+                "type": "Electric SUV",
+                "price": 59999.99,
+                "rating": 4.6,
+                "description": "The Tesla Model Y is a compact electric SUV with impressive performance and a focus on eco-friendly transportation."
+            }
+        ],
+        "honda": [
+            {
+                "id": 1,
+                "image": "https://example.com/honda1.jpg",
+                "name": "Honda Civic",
+                "brand": "Honda",
+                "type": "Sedan",
+                "price": 23999.99,
+                "rating": 4.6,
+                "description": "The Honda Civic is a compact sedan with a reputation for reliability and fuel efficiency. It's a practical choice for daily driving."
+            },
+            {
+                "id": 2,
+                "image": "https://example.com/honda2.jpg",
+                "name": "Honda CR-V",
+                "brand": "Honda",
+                "type": "SUV",
+                "price": 29999.99,
+                "rating": 4.7,
+                "description": "The Honda CR-V is a versatile SUV with a spacious interior and a comfortable ride. It's perfect for family trips and outdoor adventures."
+            },
+            {
+                "id": 3,
+                "image": "https://example.com/honda3.jpg",
+                "name": "Honda Accord",
+                "brand": "Honda",
+                "type": "Sedan",
+                "price": 26999.99,
+                "rating": 4.5,
+                "description": "The Honda Accord is a mid-size sedan with a balance of performance and comfort. It's a popular choice for those seeking a reliable vehicle."
+            },
+            {
+                "id": 4,
+                "image": "https://example.com/honda4.jpg",
+                "name": "Honda CR-Z",
+                "brand": "Honda",
+                "type": "Hybrid",
+                "price": 24999.99,
+                "rating": 4.3,
+                "description": "The Honda CR-Z is a sporty hybrid with a unique design. It offers a combination of fuel efficiency and a sporty driving experience."
+            }
+        ],
+        "mercedes-benz": []
+    }
+]

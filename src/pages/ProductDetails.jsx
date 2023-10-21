@@ -14,7 +14,7 @@ const ProductDetails = () => {
         e.preventDefault();
 
         if (!alreadyAdded) {
-            fetch('http://localhost:5000/carts', {
+            fetch('https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

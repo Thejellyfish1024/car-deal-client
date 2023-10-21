@@ -13,7 +13,7 @@ const Cart = ({ cart }) => {
 
     const handleDelete = _id => {
 
-        fetch(`http://localhost:5000/carts/${_id}`, {
+        fetch(`https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/carts/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

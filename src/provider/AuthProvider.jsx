@@ -19,7 +19,7 @@ const AuthProvider = ({ children }) => {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/carts')
+        fetch('https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/carts')
         .then(res => res.json())
         .then(data => {
             console.log(data);

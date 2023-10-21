@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
         {
             path:'/carts',
             element:<PrivateRoute><MyCarts></MyCarts></PrivateRoute>,
-            loader:() => fetch('http://localhost:5000/carts')
+            loader:() => fetch('https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/carts')
         },
         {
             path:'/login',
@@ -42,12 +42,12 @@ export const router = createBrowserRouter([
         {
           path:'/:brand',
           element:<SingleBrandPage></SingleBrandPage>,
-          loader:() => fetch('http://localhost:5000/cars')
+          loader:() => fetch('https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/cars')
         },
         {
           path:'/:brand/:id',
           element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-          loader:({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+          loader:({params}) => fetch(`https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/cars/${params.id}`)
         },
         {
           path:'/updateProduct',

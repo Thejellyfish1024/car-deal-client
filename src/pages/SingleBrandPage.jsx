@@ -21,7 +21,7 @@ const SingleBrandPage = () => {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/advertisements')
+        fetch('https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/advertisements')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

@@ -19,7 +19,7 @@ const AddProduct = () => {
     //     const newProduct = {name , image , brand, type, price , rating, description}
     //     console.log(newProduct);
 
-    //     fetch('http://localhost:5000/cars',{
+    //     fetch('https://car-deal-website-server-qc5a8l7so-al-amin-rahims-projects.vercel.app/cars',{
     //         method:'POST',
     //         headers:{
     //             'content-type' : 'application/json'

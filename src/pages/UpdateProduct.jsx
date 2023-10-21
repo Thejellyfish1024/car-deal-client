@@ -1,42 +1,11 @@
-
-
 import Footer from "../components/Footer";
 
-const AddProduct = () => {
 
-    // const handleAddProduct = e =>{
-    //     e.preventDefault();
-
-    //     const form = e.target;
-    //     const name = form.name.value;
-    //     const image = form.image.value; 
-    //     const brand = form.brand.value; 
-    //     const type = form.type.value; 
-    //     const price = form.price.value; 
-    //     const rating = form.rating.value; 
-    //     const description = form.description.value;
-
-    //     const newProduct = {name , image , brand, type, price , rating, description}
-    //     console.log(newProduct);
-
-    //     fetch('http://localhost:5000/cars',{
-    //         method:'POST',
-    //         headers:{
-    //             'content-type' : 'application/json'
-    //         },
-    //         body : JSON.stringify(newProduct)
-    //     })
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //         console.log(data);
-    //         form.reset();
-    //     })
-    // }
-
+const UpdateProduct = () => {
     return (
-        <div>
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl font-bold text-center my-8 text-purple-500">Add Your Product</h2>
+            <div className="p-3">
+            <div className="max-w-7xl mx-auto bg-base-300 p-4 rounded-xl">
+                <h2 className="text-3xl font-bold text-center my-8 text-purple-500">Update Product</h2>
                 <form className="p-5">
                     <div className="md:flex gap-12">
                         <div className="md:w-1/2">
@@ -72,12 +41,9 @@ const AddProduct = () => {
                     </div>
                     {/*  */}
 
-                    <div className="md:w-1/2">
-                        <p className="text-xl font-semibold my-3">Description</p>
-                        <textarea name="description" className="textarea textarea-primary w-4/5 h-40" required placeholder="Description"></textarea>
-                    </div>
+                    
                     <button className="btn btn-success text-xl font-bold mt-5">
-                        <input type="submit" value="Add Product" />
+                        <input type="submit" value="Submit" />
                     </button>
 
                 </form>
@@ -89,4 +55,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;

@@ -28,7 +28,7 @@ const SingleBrandCard = ({ card }) => {
                     </div>
                     <div className="card-actions justify-end">
                         <Link to={`/${brand}/${_id}`}><div className="badge font-semibold  badge-outline">See Details</div></Link>
-                        <Link><div className="badge font-semibold badge-outline">Update</div></Link>
+                        <Link to='/updateProduct'><div className="badge font-semibold badge-outline">Update</div></Link>
                     </div>
                 </div>
             </div>

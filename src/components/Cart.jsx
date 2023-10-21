@@ -30,14 +30,11 @@ const Cart = ({ cart }) => {
                 console.log(data);
             })
 
-
-
-
     }
     return (
-        <div>
-            <div className="relative flex flex-col h-[60vh] text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
-                <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+        <div className="p-5">
+            <div className="relative flex flex-col lg:h-[60vh] h-[80vh] md:h-[80vh] text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
+                <div className="relative mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                     <img
                         src={image}
                         className="w-full h-full"

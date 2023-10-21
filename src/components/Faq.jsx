@@ -1,11 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Faq = () => {
+    const {darkMode} = useContext(AuthContext)
     return (
         <div className="max-w-7xl mx-auto mb-10 p-4">
             <h2 className="md:text-3xl text-2xl font-semibold text-center my-8"> Frequently Asked Questions About Us</h2>
-            <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <div className={`collapse collapse-arrow  mb-4 ${darkMode ? 'bg-gray-600' : 'bg-base-200'}`}>
                 <input type="radio" name="my-accordion-1" checked="checked" />
                 <div className="collapse-title text-xl font-semibold">
                     What types of vehicles do you offer?
@@ -15,7 +18,7 @@ const Faq = () => {
                 </div>
                 {/*  */}
             </div>
-            <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <div className={`collapse collapse-arrow  mb-4 ${darkMode ? 'bg-gray-600' : 'bg-base-200'}`}>
                 <input type="radio" name="my-accordion-1" />
                 <div className="collapse-title text-xl font-semibold">
                     Can I customize the features and options on my vehicle?
@@ -25,7 +28,7 @@ const Faq = () => {
                 </div>
                 {/*  */}
             </div>
-            <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <div className={`collapse collapse-arrow  mb-4 ${darkMode ? 'bg-gray-600' : 'bg-base-200'}`}>
                 <input type="radio" name="my-accordion-1" />
                 <div className="collapse-title text-xl font-semibold">
                     How long does it take to get my customized vehicle?
@@ -35,7 +38,7 @@ const Faq = () => {
                 </div>
                 {/*  */}
             </div>
-            <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <div className={`collapse collapse-arrow  mb-4 ${darkMode ? 'bg-gray-600' : 'bg-base-200'}`}>
                 <input type="radio" name="my-accordion-1" checked="checked" />
                 <div className="collapse-title text-xl font-semibold">
                     What financing options do you offer?
@@ -45,7 +48,7 @@ const Faq = () => {
                 </div>
                 {/*  */}
             </div>
-            <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <div className={`collapse collapse-arrow  mb-4 ${darkMode ? 'bg-gray-600' : 'bg-base-200'}`}>
                 <input type="radio" name="my-accordion-1" />
                 <div className="collapse-title text-xl font-semibold">
                     Are your vehicles fuel-efficient or environmentally friendly?

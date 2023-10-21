@@ -9,6 +9,7 @@ import SingleBrandPage from "../pages/SingleBrandPage";
 import ProductDetails from "../pages/ProductDetails";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
+import UpdateProduct from "../pages/UpdateProduct";
 
 
 export const router = createBrowserRouter([
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
           path:'/:brand/:id',
           element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
           loader:({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+        },
+        {
+          path:'/updateProduct',
+          element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
         }
       ]
     },

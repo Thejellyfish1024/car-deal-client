@@ -16,6 +16,7 @@ const AuthProvider = ({ children }) => {
     const [displayName, setDisplayName] = useState(null);
     const [photoURL, setPhotoURL] = useState(null);
     const [myCarts, setMyCarts] = useState([]);
+    const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() =>{
         fetch('http://localhost:5000/carts')
@@ -64,6 +65,8 @@ const AuthProvider = ({ children }) => {
     }, [displayName, photoURL])
 
     const authInfo = {
+        darkMode,
+        setDarkMode,
         setMyCarts,
         myCarts,
         user,

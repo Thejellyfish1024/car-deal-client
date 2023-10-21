@@ -1,9 +1,37 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
     const product = useLoaderData();
-    const { brand, image, description, _id, name, price } = product;
+    const { brand, image, description, name, price } = product;
     console.log(product);
+
+    const handleAddToCart = e =>{
+        e.preventDefault();
+
+        fetch('http://localhost:5000/carts',{
+            method:'POST',
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body:JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            if(data.acknowledged){
+                Swal.fire({
+                    title: 'Successfully Added to Carts',
+                    text: 'Go to My Cart to order now',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                  })
+            }
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+    }
     return (
         <div className="max-w-7xl mx-auto lg:p-2 p-5 mt-12">
             <div className="relative flex w-full flex-col  lg:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -25,8 +53,7 @@ const ProductDetails = () => {
                         {description}
                     </p>
                     <h4 className="text-xl font-semibold text-orange-500 mb-10">Price : {price}$</h4>
-                    <a className="inline-block" href="#">
-                        <button
+                        <button onClick={handleAddToCart}
                             className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button"
                         >
@@ -47,7 +74,6 @@ const ProductDetails = () => {
                                 ></path>
                             </svg>
                         </button>
-                    </a>
                 </div>
             </div>
         </div>

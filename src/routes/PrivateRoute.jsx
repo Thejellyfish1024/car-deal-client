@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
-import { Navigate, useLocation } from "react-router-dom";
-import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
+import { Navigate, useLocation } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 const PrivateRoute = ({ children }) => {
+    // console.log(children);
     const { user, loading } = useContext(AuthContext)
     const location = useLocation();
 
@@ -29,11 +30,7 @@ const PrivateRoute = ({ children }) => {
     return (
         <div>
             {
-                Swal.fire({
-                    title: 'Please login first',
-                    icon: 'error',
-                    confirmButtonText: 'Close'
-                  })
+                toast.error('Please login first')
             }
             <Navigate state={location?.pathname} to="/login"></Navigate>
         </div>

@@ -11,40 +11,40 @@ import Footer from "../components/Footer";
 
 const AddProduct = () => {
 
-    const handleAddProduct = e =>{
-        e.preventDefault();
+    // const handleAddProduct = e =>{
+    //     e.preventDefault();
 
-        const form = e.target;
-        const name = form.name.value;
-        const image = form.image.value; 
-        const brand = form.brand.value; 
-        const type = form.type.value; 
-        const price = form.price.value; 
-        const rating = form.rating.value; 
-        const description = form.description.value;
+    //     const form = e.target;
+    //     const name = form.name.value;
+    //     const image = form.image.value; 
+    //     const brand = form.brand.value; 
+    //     const type = form.type.value; 
+    //     const price = form.price.value; 
+    //     const rating = form.rating.value; 
+    //     const description = form.description.value;
 
-        const newProduct = {name , image , brand, type, price , rating, description}
-        console.log(newProduct);
+    //     const newProduct = {name , image , brand, type, price , rating, description}
+    //     console.log(newProduct);
 
-        fetch('http://localhost:5000/cars',{
-            method:'POST',
-            headers:{
-                'content-type' : 'application/json'
-            },
-            body : JSON.stringify(newProduct)
-        })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data);
-            form.reset();
-        })
-    }
+    //     fetch('http://localhost:5000/cars',{
+    //         method:'POST',
+    //         headers:{
+    //             'content-type' : 'application/json'
+    //         },
+    //         body : JSON.stringify(newProduct)
+    //     })
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //         console.log(data);
+    //         form.reset();
+    //     })
+    // }
 
     return (
         <div>
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold text-center my-8 text-purple-500">Add Your Product</h2>
-                <form onSubmit={handleAddProduct}>
+                <form >
                     <div className="flex gap-12">
                         <div className="w-1/2">
                             <p className="text-xl font-semibold my-3">Product Name</p>

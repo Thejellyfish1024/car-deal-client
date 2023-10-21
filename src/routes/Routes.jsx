@@ -8,12 +8,14 @@ import Register from "../pages/Register";
 import SingleBrandPage from "../pages/SingleBrandPage";
 import ProductDetails from "../pages/ProductDetails";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <App></App>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:'/',

@@ -1,25 +1,30 @@
-import { useLoaderData } from "react-router-dom";
+
 import Cart from "../components/Cart";
+import Footer from "../components/Footer";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 
 const MyCarts = () => {
-    const carts = useLoaderData();
-    console.log(carts);
+    const { myCarts } = useContext(AuthContext)
     return (
-        <div className="max-w-7xl mx-auto mt-12">
-            {
-                carts ?
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+        <div>
+            <div className="max-w-7xl mx-auto mt-12 min-h-[40vh]">
                 {
-                    carts.map(cart =><Cart key={cart._id} cart={cart}></Cart>)
+                    myCarts.length > 0 ?
+                        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+                            {
+                                myCarts.map(cart => <Cart key={cart._id} cart={cart}></Cart>)
+                            }
+                        </div>
+                        :
+                        <div>
+                            <h2 className="text-3xl font-bold text-center text-red-500">No Products have been added yet</h2>
+                        </div>
                 }
             </div>
-            :
-            <div>
-                <h2 className="text-3xl font-bold text-center text-red-500">No Products have been added yet</h2>
-            </div>
-            }
+            <Footer></Footer>
         </div>
     );
 };

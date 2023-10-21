@@ -5,7 +5,7 @@ import { BsFillStarFill } from 'react-icons/bs';
 
 
 const SingleBrandCard = ({ card }) => {
-    const { brand, image, type, name, price, rating } = card;
+    const { brand, image, type,_id, name, price, rating } = card;
     return (
 
         <div className=" flex justify-center">
@@ -27,7 +27,7 @@ const SingleBrandCard = ({ card }) => {
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <Link><div className="badge font-semibold  badge-outline">See Details</div></Link>
+                        <Link to={`/${brand}/${_id}`}><div className="badge font-semibold  badge-outline">See Details</div></Link>
                         <Link><div className="badge font-semibold badge-outline">Update</div></Link>
                     </div>
                 </div>

@@ -5,16 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCJkbR2tJU2d99MxtIUoSDTfCFVWBWG3VE",
-  authDomain: "social-event-management-ebe05.firebaseapp.com",
-  projectId: "social-event-management-ebe05",
-  storageBucket: "social-event-management-ebe05.appspot.com",
-  messagingSenderId: "645160336232",
-  appId: "1:645160336232:web:96765320ca01795df034dd"
+  apiKey: "AIzaSyCFd_8DWmd0tZCkim_6F_-n1WaPBI2fLOs",
+  authDomain: "car-deal-website.firebaseapp.com",
+  projectId: "car-deal-website",
+  storageBucket: "car-deal-website.appspot.com",
+  messagingSenderId: "308826406128",
+  appId: "1:308826406128:web:f6f0b18ae1341678129635"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 
 export default app;

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
-import { AuthContext } from "../provider/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 const PrivateRoute = ({ children }) => {
@@ -35,7 +35,7 @@ const PrivateRoute = ({ children }) => {
                     confirmButtonText: 'Close'
                   })
             }
-            <Navigate state={location.pathname} to="/login"></Navigate>
+            <Navigate state={location?.pathname} to="/login"></Navigate>
         </div>
     );
 };

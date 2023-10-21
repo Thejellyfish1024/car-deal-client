@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import SingleBrandPage from "../pages/SingleBrandPage";
 import ProductDetails from "../pages/ProductDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -20,11 +21,11 @@ export const router = createBrowserRouter([
         },
         {
             path:'/addProduct',
-            element:<AddProduct></AddProduct>
+            element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
         },
         {
             path:'/carts',
-            element:<MyCarts></MyCarts>,
+            element:<PrivateRoute><MyCarts></MyCarts></PrivateRoute>,
             loader:() => fetch('http://localhost:5000/carts')
         },
         {
@@ -42,7 +43,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'/:brand/:id',
-          element:<ProductDetails></ProductDetails>,
+          element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
           loader:({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
         }
       ]

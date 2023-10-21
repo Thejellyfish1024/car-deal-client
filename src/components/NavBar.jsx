@@ -1,7 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/carLogo.png'
+import { useContext } from 'react';
+import { AuthContext } from '../provider/AuthProvider';
 
 const NavBar = () => {
+
+    const { user , logOut} = useContext(AuthContext)
 
     const links = <div className="lg:flex">
         <li><NavLink className={({ isActive }) => isActive ? "text-red-500 md:text-xl font-bold" : "md:text-xl"} to='/'>Home</NavLink></li>
@@ -31,7 +35,14 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end pr-4">
-                <Link to='/login' className=' bg-base-200 py-3 md:text-xl rounded-lg px-8 text-orange-500 font-semibold'>Login</Link>
+                {
+                    user ?
+                        <div>
+                            <button onClick={logOut}>Logout</button>
+                        </div>
+                        :
+                        <Link to='/login' className=' bg-base-200 py-3 md:text-xl rounded-lg px-8 text-orange-500 font-semibold'>Login</Link>
+                }
             </div>
         </div>
     );

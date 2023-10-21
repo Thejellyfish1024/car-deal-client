@@ -3,6 +3,7 @@
 import { useContext } from "react";
 
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Cart = ({ cart }) => {
@@ -20,6 +21,11 @@ const Cart = ({ cart }) => {
                 if (data.deletedCount) {
                     const remaining = myCarts.filter(cart => cart._id !== _id)
                     setMyCarts(remaining)
+                    Swal.fire({
+                        title: 'Successfully Deleted',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                    })
                 }
                 console.log(data);
             })

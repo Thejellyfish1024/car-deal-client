@@ -26,11 +26,7 @@ const Register = () => {
         .then(result => {
             console.log(result.user)
             toast.success('Registration Done Successfully!!')
-            // result.user.displayName = name;
-            // result.user.photoURL = url;
             console.log(result.user);
-            // setDisplayName(name)
-            // setPhotoURL(url)
             handleUpdateProfile(name,url)
             logOut();
             navigate('/login');
